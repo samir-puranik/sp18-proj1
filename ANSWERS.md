@@ -16,7 +16,7 @@ I passed in trainer_path(current_trainer). This is the path_prefix to the path t
 
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
-During the default rendering that happens for every page in application.html.erb, there is a check to see if any messages should be flashed to the screen. It does this by flashing every message in the flashes hash. The line above adds an error type to the flash map so that the certain message can be rendered in messages.html.erb in the layouts folder in views.
+During the default rendering that happens for every page in application.html.erb, there is a check to see if any messages should be flashed to the screen. It does this by flashing every message in the flashes hash. The line above adds an error type to the flash map so that the certain message can be rendered in messages.html.erb which is located in the layouts folder in views.
 
 # Give us feedback on the project and decal below!
 
