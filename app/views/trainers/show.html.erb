@@ -9,5 +9,6 @@
   Health: <%= p.health %>
   <br>
   <br>
+  <%= button_to "Damage", damage_path(id: p), :class => "button small", :method => :patch %>
 
 <% end %>
