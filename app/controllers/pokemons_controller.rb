@@ -21,7 +21,7 @@ class PokemonsController < ApplicationController
   end
 
   def create
-    @pokemon = Pokemon.create(pokemon_params)
+    @pokemon = Pokemon.new(pokemon_params)
     @pokemon.trainer = current_trainer
     @pokemon.health = 100
     @pokemon.level = 1
@@ -29,6 +29,7 @@ class PokemonsController < ApplicationController
       redirect_to trainer_path(current_trainer)
     else
       flash[:error] = @pokemon.errors.full_messages.to_sentence
+      redirect_to new_pokemon_path
     end
   end
 
