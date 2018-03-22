@@ -12,8 +12,11 @@ I would name my Pokemon "Pad kee mao" and "Pad see ew" because I like Thai food.
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
 
+I passed in trainer_path(current_trainer). This is the path_prefix to the path that routes to the profile of the current_trainer. We must pass current_trainer as a parameter to pull up the current trainer's page.
+
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
+During the default rendering that happens for every page in application.html.erb, there is a check to see if any messages should be flashed to the screen. It does this by flashing every message in the flashes hash. The line above adds an error type to the flash map so that the certain message can be rendered in messages.html.erb in the layouts folder in views.
 
 # Give us feedback on the project and decal below!
 
